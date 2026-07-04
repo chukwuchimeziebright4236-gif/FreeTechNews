@@ -16,5 +16,5 @@ Digital Life: Remote work, screen time, mental health, and smart living.
 The Big Picture: Tech ethics, AI regulation, and how the future affects society.
 Creator Economy: The business and tools of influencers, streamers, and digital artists.
 
-I
+
 
