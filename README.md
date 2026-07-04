@@ -1,5 +1,4 @@
- 📝 About Us Section
-A deeper look into your mission for your "About" page.
+ About Us 
 
 Technology is no longer just for engineers; it is the fabric of modern culture. FreeTechNews was founded on the belief that everyone deserves to understand the digital forces shaping our daily lives. We cut through the corporate jargon to deliver sharp, engaging stories about meme culture, the creator economy, digital privacy, and how tech influences art, entertainment, and society. Best of all? It is completely free, forever.
 
