@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeTechNews | Behind the AI, Software & Hardware</title>
+    <style>
+        /* Modern Minimalist Reset & Variables */
+        :root {
+            --bg-color: #f9fafb;
+            --text-color: #111827;
+            --accent-purple: #7c3aed;
+            --accent-orange: #ea580c;
+            --accent-blue: #2563eb;
+            --card-bg: #ffffff;
+            --muted-text: #4b5563;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+            text-decoration: none;
+            letter-spacing: -0.05em;
+        }
+
+        .logo span {
+            color: var(--accent-purple);
+        }
+
+        .badge {
+            background-color: #f3e8ff;
+            color: var(--accent-purple);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Banner */
+        .hero {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--muted-text);
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Main Grid Layout */
+        .main-layout {
+            max-width: 1100px;
+            margin: 0 auto 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 2.25rem; }
+        }
+
+        /* Feed Elements */
+        .section-title {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .article-card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-card p {
+            color: var(--muted-text);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--text-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Sponsored Monetization Slot */
+        .cpa-container {
+            background: #ffffff; 
+            border: 2px dashed var(--accent-purple); 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            position: relative;
+        }
+
+        .cpa-badge {
+            position: absolute; 
+            top: -10px; 
+            left: 15px; 
+            background: var(--accent-purple); 
+            color: white; 
+            font-size: 0.65rem; 
+            font-weight: 800; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            text-transform: uppercase;
+        }
+
+        .cpa-btn {
+            display: inline-block; 
+            background: var(--accent-purple); 
+            color: white; 
+            text-decoration: none; 
+            padding: 0.5rem 1rem; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .cpa-btn:hover {
+            background: #6d28d9;
+        }
+
+        /* Sidebar / About */
+        .sidebar-box {
+            background-color: #f3f4f6;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: fit-content;
+        }
+
+        .sidebar-box h3 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">FreeTech<span>News</span></a>
+            <span class="badge">100% Paywall-Free</span>
+        </div>
+    </header>
+
+    <!-- Hero Intro -->
+    <section class="hero">
+        <h1>Behind the Code & Silicon.</h1>
+        <p>Documenting the evolution of AI, software ecosystems, and hardware breakthroughs through the human stories of the engineers who build them.</p>
+    </section>
+
+    <!-- Main Content Dynamic Grid -->
+    <main class="main-layout">
+        
+        <!-- Left Side: Tech & Human-Interest Feed -->
+        <section>
+            <h2 class="section-title">Latest Developer Stories</h2>
+            
+            <!-- ARTICLE 1: AI FOCUS -->
+            <article class="article-card">
+                <span class="category-tag" style="color: var(--accent-purple);">Artificial Intelligence</span>
+                <h3>The Architect of the Algorithm: Inside the Mind of the Engineer Re-Writing LLM Logic</h3>
+                <p>We sit down with the lead developer of an open-source model to discuss how removing redundant weight vectors is bringing powerful AI to low-end consumer hardware.</p>
+                <a href="#" class="read-more">Read Developer Interview →</a>
+            </article>
+
+            <!-- CLEAN SPONSORED VALUE-EXCHANGE CPA SLOT -->
+            <div class="cpa-container">
+                <span class="cpa-badge">Free Developer Resource</span>
+                <h4 style="margin: 0.5rem 0 0.25rem 0; font-size: 1.1rem; color: #111827;">Get the AI Prompt & API Integration Cheat-Sheet</h4>
+                <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 1rem;">A compiled list of hidden API endpoints and prompt templates used by top-tier software engineers to cut cloud costs by 40%.</p>
+                
+                <!-- NOTE: Replace '#' with your actual CPALead, OGAds, or Affiliate network link -->
+                <a href="#" target="_blank" class="cpa-btn">Verify & Download Free Kit →</a>
+            </div>
+
+            <!-- ARTICLE 2: HARDWARE & PEOPLE -->
+            <article class="article-card">
+                <span class="category-tag" style="color: var(--accent-orange);">Hardware Evolution</span>
+                <h3>Silicon & Sweat: The Indie Team Building Open-Source RISC-V Chips in a Garage</h3>
+                <p>Meet the four hardware hackers bypassing global supply chains to manufacture custom, privacy-first computer microcontrollers on an incredibly tight budget.</p>
+                <a href="#" class="read-more">Read Hardware Deep Dive →</a>
+            </article>
+
+            <!-- ARTICLE 3: SOFTWARE CULTURE -->
+            <article class="article-card">
+                <span class="category-tag" style="color: var(--accent-blue);">Software Development</span>
+                <h3>Burnt Out by Success: What Happens When a Weekend Side-Project Runs the Internet</h3>
+                <p>An honest look at the human toll of open-source maintenance. We profile the sole developer keeping a critical web library running for millions of active websites.</p>
+                <a href="#" class="read-more">Read Story →</a>
+            </article>
+        </section>
+
+        <!-- Right Side: Niche Mission Sidebar -->
+        <aside>
+            <div class="sidebar-box" style="border-left: 4px solid var(--accent-purple);">
+                <h3>Behind the Code</h3>
+                <p><strong>FreeTechNews</strong> looks beyond sterile hardware benchmarks and corporate PR. We track down the engineers, researchers, and open-source contributors shaping modern tech infrastructure.</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; FreeTechNews. Democratizing technology news for everyone. Built openly on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
